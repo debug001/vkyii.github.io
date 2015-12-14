@@ -2,7 +2,7 @@
 layout: post
 title: 重装了Mac系统
 category: 
-tags: mac
+tags: Mac
 keywords: 
 description: 
 ---
