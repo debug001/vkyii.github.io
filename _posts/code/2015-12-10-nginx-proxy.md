@@ -72,18 +72,66 @@ description:
 		#keepalive_timeout  0;
 		keepalive_timeout  65;
 	
-		# 代理单个页面
-		location /test {
-			proxy_pass http://192.168.1.48:8080/test.html; 
-			proxy_set_header Host $host;  
-			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-		}
+		# HTTP Server
+		server {
+			listen       80;
+			server_name  localhost;
 	
-		# 代理一个目录
-		# from: http://192.168.1.48:8080/dir1/test.html
-		#   to: http://192.168.3.116:80/dir1/test.html
-		location ~* ^/dir1/.*$ {
-			proxy_pass http://192.168.1.48:8080;
+			#charset koi8-r;
+	
+			#access_log  logs/host.access.log  main;
+	
+			location / {
+				root   html;
+				index  index.html index.htm;
+			}
+	
+			# 代理单个页面
+			location /test {
+				proxy_pass http://192.168.1.48:8080/test.html; 
+				proxy_set_header Host $host;  
+				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+			}
+	
+			# 代理一个目录
+			# from: http://192.168.1.48:8080/dir1/test.html
+			#   to: http://192.168.3.116:80/dir1/test.html
+			location ~* ^/dir1/.*$ {
+				proxy_pass http://192.168.1.48:8080;
+			}
+			#error_page  404              /404.html;
+	
+			# redirect server error pages to the static page /50x.html
+			#
+			error_page   500 502 503 504  /50x.html;
+			location = /50x.html {
+				root   html;
+			}
+		}
+		
+		# HTTPS server
+		server {
+			listen       443;
+			ssl on;
+			server_name  localhost;
+		
+			ssl_certificate      /root/https/localhost.crt;
+			ssl_certificate_key  /root/https/localhost.key;
+		
+			#    ssl_session_cache    shared:SSL:1m;
+			#    ssl_session_timeout  5m;
+		
+			#    ssl_ciphers  HIGH:!aNULL:!MD5;
+			#    ssl_prefer_server_ciphers  on;
+			location / {
+				# root   html;
+				# index  index.html index.htm;
+				proxy_pass https://192.168.1.117:443;
+				proxy_set_header Host $host:443;
+				proxy_set_header X-Real-IP $remote_addr;
+				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+				proxy_set_header Via "nginx";
+			}
 		}
 	}
 	
@@ -126,4 +174,6 @@ description:
 	httpd.socket = ssl.wrap_socket (httpd.socket, keyfile='./localhost.key' certfile='./localhost.pem', server_side=True)
 	httpd.serve_forever()
 	
+	# 使用openssl测试
 	openssl s_server -accept 443 -key localhost.key -cert localhost.crt -CAfile ca.crt
+	openssl s_client -connect 192.168.3.117:443 -key user.crt -key user.key -CAfile ca.crt
