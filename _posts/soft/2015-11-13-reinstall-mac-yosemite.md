@@ -111,9 +111,13 @@ description:
 
 	# 安装zsh
 	brew cask install zsh
-	# 安装oh-my-zsh
+    # 安装oh-my-zsh
 	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	# 安装powerline(增强命令行的显示)
+    # 自动补全失效时:
+    compaudit | xargs chmod g-w
+    compaudit | xargs chown root
+	rm -f ~/.zcompdump; compinit
+    # 安装powerline(增强命令行的显示)
 	pip install powerline-status
 	pip show powerline-status
 	# 下面这个目录要根据powerline-status的结果来调整
