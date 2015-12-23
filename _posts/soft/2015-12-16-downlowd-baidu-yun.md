@@ -14,12 +14,12 @@ description:
 
 		wget -c --load-cookies=cookies.txt "下载地址" -O "文件名" 
 
+
 ## 直接获取下载地址
 <http://pan.baidu.com/wap/home>
 
 
 ## 参考
-
 <http://www.qisanfen.com/?p=442>
 
 <http://www.zhihu.com/question/22085759>
