@@ -14,3 +14,7 @@ description:
 ## .a转换为.so
 * `ar -x mylib.a`
 * `gcc -shared *.o -o mylib.so`
+
+## usb不可写
+* 报`Read-only file system`
+* sudo mount -o remount,rw '/path/to/mount/sub'
