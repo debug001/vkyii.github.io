@@ -30,6 +30,10 @@ duoshuo_short_name: vkyii
 # Build settings
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
+
+kramdown:
+  input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
+  
 sass:
   style: compressed
 
