@@ -164,6 +164,7 @@ description:
 [查词](https://github.com/liberize/alfred-dict-workflow)
 [显隐隐藏文件](https://github.com/BubiDevs/manage-hidden-files)
 [结束进程](https://github.com/ngreenstein/alfred-process-killer)
+[Package Managers Workflow](https://github.com/willfarrell/alfred-pkgman-workflow)
 
 	
 ## 非brew
