@@ -1,10 +1,10 @@
 ---
 layout: post
 title: 重装了Mac系统
-category: 
+category:
 tags: Mac
-keywords: 
-description: 
+keywords:
+description:
 ---
 
 # 安装系统
@@ -56,6 +56,7 @@ description:
 	brew cask install macdown 
 	brew cask install xiami 
 	brew cask install the-unarchiver
+    brew cask install key-codes
 	
 ## sublime
 	brew cask install sublime-text3
@@ -135,7 +136,27 @@ description:
 	# 自动登录SSH
 	brew install https://raw.github.com/eugeneoden/homebrew/eca9de1/Library/Formula/sshpass.rb
 	/usr/local/Cellar/sshpass/1.05/bin/sshpass -p password ssh -o StrictHostKeychecking=no root@115.28.147.152
-	
+
+### 进一步的配置
+    * CTRL + ,
+    * 新建一个Profile,名为HotKey
+    * Keys -> HotKey
+        * Show/Hide iTerm2 with a system-wide hotkey
+            * 设置一个快捷键,如CMD+Space
+        * HotKey toggles a dedicated window with profile
+            * 选择'HotKey'这个Profile
+    * 修改快捷键
+        * 很多默认快捷键,软件不提供修改方法,可以自己改.
+        * 系统偏好设置 -> 键盘 -> 快捷键 -> 应用快捷键.
+        * 选择Vim.app
+        * 增加或修改快捷键,需要与软件里显示的名字完全一致,包括中文.
+    
+## Vim
+    brew install vim --with-lua
+    # Macvim依赖于XCode,先从AppStore安装,再同意其license
+    brew install macvim --with-override-system-vim --with-lua
+    brew linkapp macvim
+
 ## proxychains + shadowsocks
 	brew cask install shadowsocksx
 	brew install proxychains-ng
@@ -170,6 +191,12 @@ description:
 ## 非brew
 * appcleaner 用来快速清理不用的APP
 
+
+## 字体(中英文等宽)
+[Inconsolata](http://www.levien.com/type/myfonts/inconsolata.html)
+[iosevka](https://github.com/be5invis/Iosevka)
+[UbuntuMono](http://font.ubuntu.com/)
+[温泉驿](http://wenq.org/wqy2/index.cgi?Download#ZenHei_Stable)
 
 ## 参考
 
