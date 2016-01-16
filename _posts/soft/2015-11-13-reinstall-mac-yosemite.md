@@ -150,12 +150,15 @@ description:
         * 系统偏好设置 -> 键盘 -> 快捷键 -> 应用快捷键.
         * 选择Vim.app
         * 增加或修改快捷键,需要与软件里显示的名字完全一致,包括中文.
-    
+
 ## Vim
     brew install vim --with-lua
     # Macvim依赖于XCode,先从AppStore安装,再同意其license
     brew install macvim --with-override-system-vim --with-lua
     brew linkapp macvim
+
+## Tmux
+    brew install tmux
 
 ## proxychains + shadowsocks
 	brew cask install shadowsocksx
