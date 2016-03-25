@@ -185,6 +185,9 @@ brew linkapp macvim
 ## Tmux
 ```shell
 brew install tmux
+# 处理类似subl命令行打不开的问题
+brew install reattach-to-user-namespace
+echo 'alias subl="reattach-to-user-namespace subl"' >> ~/.bashrc
 ```
 
 ## proxychains + shadowsocks
@@ -192,7 +195,7 @@ brew install tmux
 brew cask install shadowsocksx
 brew install proxychains-ng
 ```
-    
+
 推荐配置(**/usr/local/Cellar/proxychains-ng/4.10/etc/proxychains.conf**)
 
 ```shell    
