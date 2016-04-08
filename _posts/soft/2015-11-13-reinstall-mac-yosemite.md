@@ -16,6 +16,7 @@ description:
 
 ## HomeBrew
 [地址](http://brew.sh/)
+
 ```shell
 touch ~/.bashrc
 echo "export HOMEBREW_GITHUB_API_TOKEN=6b3d4908a0db7bbcab2699b24452bb71ef68d127" >> ~/.bashrc
@@ -25,17 +26,17 @@ brew tap caskroom/versions
 ### 更换镜像源
 ```shell
 cd /usr/local
-//二者选其一即可更新
-//清华镜像源
+# 二者选其一即可更新
+# 清华镜像源
 git remote set-url origin git://mirrors.tuna.tsinghua.edu.cn/homebrew.git
-//中科大镜像源
+# 中科大镜像源
 git remote set-url origin http://mirrors.ustc.edu.cn/homebrew.git
 
-// 后续操作
+# 后续操作
 cd ~
 mkdir tmp
 cd tmp
-//以下要与你选择的镜像源相同
+# 以下要与你选择的镜像源相同
 git clone git://mirrors.tuna.tsinghua.edu.cn/homebrew.git
 git clone http://mirrors.ustc.edu.cn/homebrew.git
 
@@ -44,10 +45,10 @@ sudo rm -rf /usr/local/Library
 sudo cp -R homebrew/.git /usr/local/
 sudo cp -R homebrew/Library /usr/local/
 
-// 排错
-//确保目录归属管理组
+# 排错
+# 确保目录归属管理组
 sudo chgrp -R admin /usr/local
-//确保管理组可读
+# 确保管理组可读
 sudo chmod -R g+w /usr/local
 ```
 
