@@ -5,6 +5,10 @@ url: http://www.vkyii.com
 description: 每一次成功,都来之不易.
 # 站点信息
 rss_url: /pages/atom.xml
+# 图床
+img_url: http://7xsutu.com1.z0.glb.clouddn.com/
+# img_url: ../../assets/img/
+# img_url: /assets/img/
 
 
 # Social account
@@ -23,10 +27,6 @@ rss_url: /pages/atom.xml
 duoshuo_short_name: vkyii
 
 
-# Google Analytics
-# google_analytics: tracking_ID
-
-
 # Build settings
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
@@ -37,5 +37,5 @@ kramdown:
 sass:
   style: compressed
 
-avatar: http://i5.tietuku.com/e6751cf5be327342.jpg
-favicon: http://i5.tietuku.com/e6751cf5be327342.jpg
+avatar: /assets/img/avatar.png
+favicon: /assets/img/qrcode.jpg
