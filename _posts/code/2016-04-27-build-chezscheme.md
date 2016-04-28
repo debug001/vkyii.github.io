@@ -20,7 +20,6 @@ sudo make install
 
 # 使用
 man scheme
-man pettie
 scheme
 ```
 
