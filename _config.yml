@@ -6,9 +6,9 @@ description: 每一次成功,都来之不易.
 # 站点信息
 rss_url: /pages/atom.xml
 # 图床
-img_url: http://7xsutu.com1.z0.glb.clouddn.com/
-# img_url: ../../assets/img/
-# img_url: /assets/img/
+# img_url: http://7xsutu.com1.z0.glb.clouddn.com
+img_url: ../..
+# img_url: /assets/img
 
 
 # Social account
