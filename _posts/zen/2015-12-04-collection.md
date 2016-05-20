@@ -11,3 +11,4 @@ description:
 
 ## 同步
 * [Daemon Sync](http://www.iplaysoft.com/daemon-sync.html)
+* [Snippets](http://snippets.me/), 管理代码片段.
