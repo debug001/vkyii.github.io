@@ -39,7 +39,8 @@ module Jekyll
       # Gather settings
       site = context.registers[:site]
       settings = site.config['picture']
-      url = site.config['url']
+      # url = site.config['url']
+      url = site.config['img_url']
       markup = /^(?:(?<preset>[^\s.:\/]+)\s+)?(?<image_src>[^\s]+\.[a-zA-Z0-9]{3,4})\s*(?<source_src>(?:(source_[^\s.:\/]+:\s+[^\s]+\.[a-zA-Z0-9]{3,4})\s*)+)?(?<html_attr>[\s\S]+)?$/.match(render_markup)
       preset = settings['presets'][ markup[:preset] ] || settings['presets']['default']
 
