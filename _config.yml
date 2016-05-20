@@ -7,7 +7,7 @@ description: 每一次成功,都来之不易.
 rss_url: /pages/atom.xml
 # 图床
 # img_url: http://7xsutu.com1.z0.glb.clouddn.com
-img_url: ../..
+img_url: 
 # img_url: /assets/img
 
 
@@ -39,3 +39,26 @@ sass:
 
 avatar: /assets/img/avatar.png
 favicon: /assets/img/qrcode.jpg
+
+# <picture>
+picture:
+  source: "_posts/assets/img"
+  output: "assets/img"
+  markup: "picture"
+  presets:
+    default:
+      ppi: [1]
+      attr:
+        class: "default-img"
+        itemprop: "image"
+      source_large:
+        media: "(min-width: 50em)"
+        width: "800"
+      source_medium:
+        media: "(min-width: 25em)"
+        width: "400"
+      source_small:
+        media: "(min-width: 12.5em)"
+        width: "200"
+      source_default:
+        width: "1000"
