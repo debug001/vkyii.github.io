@@ -2,3 +2,4 @@ _site/
 .sass-cache/
 .Ulysses-Group.plist
 .jekyll-metadata
+.idea

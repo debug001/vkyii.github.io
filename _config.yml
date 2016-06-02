@@ -5,11 +5,6 @@ url: http://www.vkyii.com
 description: 每一次成功,都来之不易.
 # 站点信息
 rss_url: /pages/atom.xml
-# 图床
-# img_url: http://7xsutu.com1.z0.glb.clouddn.com
-img_url: 
-# img_url: /assets/img
-
 
 # Social account
 # twitter:  username
@@ -18,10 +13,8 @@ img_url:
 # codepen:  username
 # dribbble: username
 
-
 # Comment
 # disqus_shortname: discussion_shortname
-
 
 #多说配置
 duoshuo_short_name: vkyii
@@ -39,26 +32,3 @@ sass:
 
 avatar: /assets/img/avatar.png
 favicon: /assets/img/qrcode.jpg
-
-# <picture>
-picture:
-  source: "_posts/assets/img"
-  output: "assets/img"
-  markup: "picture"
-  presets:
-    default:
-      ppi: [1]
-      attr:
-        class: "default-img"
-        itemprop: "image"
-      source_large:
-        media: "(min-width: 50em)"
-        width: "800"
-      source_medium:
-        media: "(min-width: 25em)"
-        width: "400"
-      source_small:
-        media: "(min-width: 12.5em)"
-        width: "200"
-      source_default:
-        width: "1000"
