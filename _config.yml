@@ -32,3 +32,18 @@ sass:
 
 avatar: /assets/img/avatar.png
 favicon: /assets/img/qrcode.jpg
+
+collections:
+  private:
+    output: true
+    special: true
+    ispost: true
+    permalink: /:year/:month/:day/:title.html
+    staticlink: ""
+  public:
+    output: true
+    special: true
+    ispost: true
+    permalink: /:year/:month/:day/:title.html
+    staticlink: ""
+
