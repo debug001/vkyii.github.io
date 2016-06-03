@@ -1,6 +1,4 @@
 
-# require "jekyll"
-
 module Jekyll
 
 	module StaticFileExtensions
