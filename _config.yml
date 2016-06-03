@@ -32,3 +32,10 @@ sass:
 
 avatar: /assets/img/avatar.png
 favicon: /assets/img/qrcode.jpg
+
+collections:
+  private:
+    output: true
+    permalink: /:year/:month/:day/:title.html
+    staticlink: /assets
+
