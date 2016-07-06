@@ -199,7 +199,7 @@ brew install proxychains-ng
 
 推荐配置(**/usr/local/Cellar/proxychains-ng/4.10/etc/proxychains.conf**)
 
-```shell    
+```shell
 strict_chain
 proxy_dns 
 remote_dns_subnet 224

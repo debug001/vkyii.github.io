@@ -15,6 +15,6 @@ description:
 # clone jekyll blog代码
 git clone https://github.com/vkyii/vkyii.github.io.git
 # 建立public和private两个worktree
-git worktree add -b post/public _posts/public origin/post/public
-git worktree add -b post/private _posts/private origin/post/private
+git worktree add -b post/public _public origin/post/public
+git worktree add -b post/private _private origin/post/private
 ```
